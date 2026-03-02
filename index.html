@@ -1,11 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <!-- Meta básicos (Hecho por Roberto) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Página informativa sobre SAP, sus módulos y ventajas para las empresas.">
+
+    <!-- Meta extra (Hecho por Sergio) -->
+    <meta name="keywords" content="SAP, ERP, empresa, software de gestión">
+    <meta name="author" content="Equipo SAP: Óscar, Roberto, Iker, Sergio, Mohsen">
+
+    <!-- Favicon (Hecho por Óscar) -->
+    <!-- Coloca el archivo favicon en la ruta: /img/favicon.ico -->
+    <link rel="icon" type="image/x-icon" href="img/SAP-Logo-History-1.png">
+
+    <title>SAP - Sistema de Planificación de Recursos Empresariales</title>
+
+    <!-- Fuente externa desde Google Fonts (Hecho por Mohsen) -->
+    <!-- Carpeta recomendada para estilos: /assets/css/styles.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Enlace a hoja de estilos externa (Hecho por Iker) -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <p>Hola</p>
+    <!-- Barra de navegación principal (Hecho por Óscar) -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <span>SAP</span>
+                <span>| ERP Empresarial</span>
+            </div>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#que-es-sap">¿Qué es SAP?</a></li>
+                    <li><a href="#modulos">Módulos</a></li>
+                    <li><a href="#ventajas">Ventajas</a></li>
+                    <li><a href="#mapa-del-sitio">Mapa del sitio</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Esqueleto principal de la página: main + sections + aside (Hecho por Roberto) -->
+    <main>
+        <div>
+            <!-- Sección: Introducción a SAP (Hecho por Roberto) -->
+            <section id="que-es-sap">
+                <div class="pill">Introducción</div>
+                <h2>¿Qué es SAP?</h2>
+                <p>
+                    SAP es uno de los sistemas ERP (Enterprise Resource Planning) más utilizados en el mundo.
+                    Permite integrar en una sola plataforma la gestión de finanzas, logística, recursos humanos,
+                    producción, ventas y muchos otros procesos de negocio.
+                </p>
+                <p>
+                    Gracias a SAP, las empresas pueden trabajar con una única base de datos y evitar duplicidades,
+                    mejorando la calidad de la información y la toma de decisiones.
+                </p>
+                <!-- Imagen ilustrativa de SAP colocada en la introducción (Hecho por Mohsen) -->
+                <!-- IMPORTANTE: asegúrate de que el nombre del archivo de imagen coincida con el que tienes en la carpeta "img" -->
+                <figure class="hero-image">
+                    <img src="img/Captura de pantalla 2026-02-26 134701.png" alt="Interfaz de ejemplo del software SAP">
+                </figure>
+            </section>
+
+            <!-- Sección: Módulos SAP (Hecho por Sergio) -->
+            <section id="modulos">
+                <div class="pill">Módulos principales</div>
+                <h2>Módulos más utilizados de SAP</h2>
+                <div class="grid-2">
+                    <article class="card">
+                        <h3>FI - Finanzas</h3>
+                        <small>Contabilidad y gestión financiera</small>
+                        <ul>
+                            <li>Gestión de cuentas a pagar y a cobrar</li>
+                            <li>Contabilidad general y de activos fijos</li>
+                            <li>Informes financieros y balance</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>MM - Gestión de materiales</h3>
+                        <small>Compras y almacenes</small>
+                        <ul>
+                            <li>Pedidos de compra y proveedores</li>
+                            <li>Gestión de inventario y almacenes</li>
+                            <li>Recepción de mercancías</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>SD - Ventas y distribución</h3>
+                        <small>Clientes y facturación</small>
+                        <ul>
+                            <li>Gestión de pedidos de venta</li>
+                            <li>Envíos, entregas y transporte</li>
+                            <li>Facturación y condiciones comerciales</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>HCM - Recursos humanos</h3>
+                        <small>Empleados y nóminas</small>
+                        <ul>
+                            <li>Datos maestros de empleados</li>
+                            <li>Gestión del tiempo y ausencias</li>
+                            <li>Nóminas y beneficios</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sección: Ventajas de SAP (Hecho por Mohsen) -->
+            <section id="ventajas">
+                <div class="pill">Beneficios</div>
+                <h2>Ventajas de implantar SAP en una empresa</h2>
+                <ul>
+                    <li>Información centralizada y en tiempo real para todos los departamentos.</li>
+                    <li>Procesos estandarizados que siguen buenas prácticas internacionales.</li>
+                    <li>Mayor trazabilidad de las operaciones (quién hace qué y cuándo).</li>
+                    <li>Mejor control de costes y de la cadena de suministro.</li>
+                    <li>Escalabilidad: se puede empezar con unos módulos y añadir más en el futuro.</li>
+                </ul>
+            </section>
+
+            <!-- Sección: Estructura de carpetas propuesta (Hecho por Roberto) -->
+           
+        </div>
+
+        <!-- Aside lateral con resumen y mapa del sitio (Hecho por Iker y Sergio) -->
+        <aside>
+            <!-- Resumen rápido (Hecho por Iker) -->
+            <section aria-label="Resumen de SAP">
+                <div class="pill">Resumen rápido</div>
+                <h2>Ficha rápida de SAP</h2>
+                <p><strong>Tipo:</strong> Sistema ERP (Enterprise Resource Planning).</p>
+                <p><strong>Objetivo:</strong> Integrar todos los procesos clave de una empresa en un único sistema.</p>
+                <div class="badge-list">
+                    <span class="badge">Finanzas</span>
+                    <span class="badge">Logística</span>
+                    <span class="badge">RRHH</span>
+                    <span class="badge">Ventas</span>
+                    <span class="badge">Producción</span>
+                </div>
+            </section>
+
+            <!-- Mapa del sitio (Hecho por Sergio) -->
+            <section id="mapa-del-sitio" aria-label="Mapa del sitio">
+                <div class="pill">Mapa del sitio</div>
+                <h2>Mapa del sitio</h2>
+                <p>Enlaces internos a las distintas secciones de esta página:</p>
+                <ul class="sitemap-list">
+                    <li><a href="#que-es-sap">Inicio — ¿Qué es SAP?</a></li>
+                    <li><a href="#modulos">Módulos principales de SAP</a></li>
+                    <li><a href="#ventajas">Ventajas para la empresa</a></li>
+                    <li><a href="#estructura-carpetas">Estructura de carpetas del proyecto</a></li>
+                    <li><a href="#equipo">Información del equipo</a></li>
+                </ul>
+            </section>
+
+            <!-- Información del equipo (Hecho por todo el equipo) -->
+            <section id="equipo" aria-label="Equipo del proyecto">
+                <div class="pill">Equipo</div>
+                <h2>Equipo que ha realizado esta página</h2>
+                <ul>
+                    <li><strong>Óscar</strong>: Barra de navegación y favicon.</li>
+                    <li><strong>Roberto</strong>: Estructura general de la página y contenido principal.</li>
+                    <li><strong>Iker</strong>: Estilos básicos, resumen lateral y footer.</li>
+                    <li><strong>Sergio</strong>: Módulos de SAP y mapa del sitio.</li>
+                    <li><strong>Mohsen</strong>: Fuente externa y apartado de ventajas.</li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    <!-- Footer con botones de redes sociales (Hecho por Iker) -->
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <strong>Proyecto SAP</strong> — Página de ejemplo para Lenguaje de Marcas.
+                <div class="footer-meta">
+                    Trabajo realizado por: Óscar · Roberto · Iker · Sergio · Mohsen
+                </div>
+            </div>
+            <div class="social-buttons" aria-label="Redes sociales">
+                <!-- Enlaces de ejemplo, se pueden cambiar por perfiles reales -->
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">F</a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">X</a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">in</a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">IG</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
