@@ -1,8 +1,14 @@
 :root {
-    --color-primario: #333333;
-    --color-secundario: #666666;
-    --color-fondo: #fafafa;
-    --color-texto: #111111;
+    /* Paleta inspirada en SAP Fiori */
+    --sap-color-primary: #0a6ed1;
+    --sap-color-primary-dark: #0854a0;
+    --sap-color-primary-light: #d1e8ff;
+    --sap-color-background: #f5f6f7;
+    --sap-color-surface: #ffffff;
+    --sap-color-border: #d9dde2;
+    --sap-color-text: #32363a;
+    --sap-color-text-muted: #6a6d70;
+    --sap-color-accent: #ffb300;
 }
 
 * {
@@ -12,9 +18,9 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background-color: #ffffff;
-    color: var(--color-texto);
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--sap-color-background);
+    color: var(--sap-color-text);
     line-height: 1.6;
 }
 
@@ -30,9 +36,9 @@ img {
 
 /* Barra de navegación (Hecho por Óscar) */
 header {
-    background: #ffffff;
-    border-bottom: 1px solid #cccccc;
+    background: linear-gradient(90deg, #0b74de, #0854a0);
     padding: 0.5rem 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .nav-container {
@@ -42,41 +48,56 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: #ffffff;
 }
 
 .logo {
-    font-weight: 600;
-    letter-spacing: 0.04em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     text-transform: uppercase;
+    font-size: 0.85rem;
 }
 
 .logo span {
     font-size: 0.8rem;
 }
 
+.logo span:last-child {
+    opacity: 0.9;
+    font-weight: 400;
+}
+
 nav ul {
     display: flex;
     list-style: none;
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 nav a {
     font-size: 0.9rem;
-    padding: 0.1rem 0;
-    border-bottom: 1px solid transparent;
+    padding-bottom: 0.15rem;
+    border-bottom: 2px solid transparent;
+    color: #eaf2fd;
+    font-weight: 400;
 }
 
-nav a:hover {
-    border-color: #000000;
+nav a:hover,
+nav a:focus-visible {
+    border-color: #ffffff;
+}
+
+nav a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
 }
 
 /* Layout principal (esqueleto) (Hecho por Roberto) */
 main {
     max-width: 1000px;
-    margin: 1rem auto 2rem;
+    margin: 1.25rem auto 2.5rem;
     padding: 0 1rem;
     display: grid;
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
@@ -97,14 +118,19 @@ main {
 
 section {
     margin-bottom: 2rem;
-    padding: 1.25rem 0;
+    padding: 1.25rem 1.5rem;
+    background-color: var(--sap-color-surface);
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--sap-color-border);
 }
 
 section h2 {
     margin-bottom: 0.75rem;
-    font-size: 1.2rem;
-    border-left: 3px solid var(--color-secundario);
-    padding-left: 0.5rem;
+    font-size: 1.25rem;
+    border-left: 4px solid var(--sap-color-primary);
+    padding-left: 0.6rem;
+    font-weight: 500;
 }
 
 section p {
@@ -116,15 +142,16 @@ section p {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    background-color: transparent;
-    color: var(--color-primario);
-    padding: 0;
-    border-radius: 0;
-    border: none;
+    letter-spacing: 0.12em;
+    background-color: var(--sap-color-primary-light);
+    color: var(--sap-color-primary-dark);
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(8, 84, 160, 0.2);
     margin-bottom: 0.6rem;
+    font-weight: 600;
 }
 
 .grid-2 {
@@ -134,21 +161,23 @@ section p {
 }
 
 .card {
-    background-color: transparent;
-    border-radius: 0;
-    padding: 0.5rem 0 0.4rem;
-    border: none;
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    padding: 0.9rem 1rem 0.8rem;
+    border: 1px solid var(--sap-color-border);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .card h3 {
     font-size: 1.05rem;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.25rem;
+    color: var(--sap-color-primary-dark);
 }
 
 .card small {
     display: block;
     font-size: 0.78rem;
-    color: #6b7280;
+    color: var(--sap-color-text-muted);
     margin-bottom: 0.4rem;
 }
 
@@ -160,13 +189,6 @@ ul li {
     margin-bottom: 0.4rem;
 }
 
-/* Aside / resumen lateral (Hecho por Mohsen) */
-aside {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
 .badge-list {
     display: flex;
     flex-wrap: wrap;
@@ -176,11 +198,12 @@ aside {
 
 .badge {
     font-size: 0.72rem;
-    background-color: transparent;
-    color: #333333;
-    padding: 0;
-    border-radius: 0;
-    border: none;
+    background-color: var(--sap-color-primary-light);
+    color: var(--sap-color-primary-dark);
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(8, 84, 160, 0.2);
+    font-weight: 500;
 }
 
 /* Mapa del sitio (Hecho por Sergio) */
@@ -194,17 +217,21 @@ aside {
 }
 
 .sitemap-list a {
-    color: #0055aa;
+    color: var(--sap-color-primary-dark);
     font-size: 0.95rem;
+}
+
+.sitemap-list a:hover {
+    text-decoration: underline;
 }
 
 /* Footer y redes sociales (Hecho por Iker) */
 footer {
     background-color: #ffffff;
-    color: #333333;
+    color: var(--sap-color-text);
     padding: 1.25rem 1rem 1rem;
     margin-top: 2rem;
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid var(--sap-color-border);
 }
 
 .footer-inner {
@@ -223,21 +250,29 @@ footer {
 }
 
 .social-buttons a {
-    display: inline;
-    border: none;
-    background: none;
-    padding: 0;
-    color: #0055aa;
-    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--sap-color-border);
+    background: #ffffff;
+    color: var(--sap-color-primary-dark);
+    font-size: 0.78rem;
+    font-weight: 600;
+    transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .social-buttons a:hover {
-    text-decoration: underline;
+    background: var(--sap-color-primary-dark);
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
 }
 
 .footer-meta {
     font-size: 0.75rem;
-    color: #6b7280;
+    color: var(--sap-color-text-muted);
     margin-top: 0.5rem;
 }
 
@@ -249,14 +284,15 @@ table {
     font-size: 0.9rem;
 }
 
-th, td {
-    border: 1px solid #dddddd;
+th,
+td {
+    border: 1px solid var(--sap-color-border);
     padding: 0.45rem 0.5rem;
     text-align: left;
 }
 
 th {
-    background-color: #f3f3f3;
+    background-color: #eef1f5;
 }
 
 /* Imagen principal de SAP en la introducción (Hecho por Mohsen) */
@@ -266,20 +302,30 @@ th {
 }
 
 .hero-image img {
-    border-radius: 0;
-    border: none;
+    border-radius: 0.4rem;
+    border: 1px solid var(--sap-color-border);
     max-width: 480px;
     width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 /* Banner de página en construcción (Hecho por Roberto) */
 .banner-construccion {
     max-width: 1000px;
     margin: 0.75rem auto 0;
-    padding: 0.5rem 1rem;
-    background: #fff9c4;
-    border: 1px solid #f9a825;
+    padding: 0.6rem 1rem;
+    background: #fff4ce;
+    border: 1px solid #f0ab00;
     font-size: 0.9rem;
+    color: #3b3f45;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.banner-image {
+    max-height: 40px;
 }
 
 .comentarios {
